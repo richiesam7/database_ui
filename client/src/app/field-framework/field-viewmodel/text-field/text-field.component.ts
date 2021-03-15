@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Customer } from '../../entityClasses/customer';
 import { GenericClass } from '../../entityClasses/genericClass';
-import { Fact } from '../../column';
+import { Column } from '../../column';
 
 @Component({
   selector: 'text-field',
@@ -40,7 +40,7 @@ export class TextFieldComponent implements OnInit {
   }
 
   public isReadOnly(): boolean {
-    const field : Fact  = this.entity.getField(this.fieldName);
+    const field : Column  = this.entity.getField(this.fieldName);
     return false; // TODO : use correct field
   }
 

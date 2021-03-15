@@ -17,7 +17,7 @@ export class GenericClass {
 
     public setAssociatedColumns() {
         this.apiResponses = new ApiResponses();
-        this.associatedColumns = this.apiResponses.custAcctClassFactFetch; // parameterize
+        this.associatedColumns = this.apiResponses.CustomerFetch; // parameterize
     }
 
     public setClassEntity() {
