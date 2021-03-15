@@ -36,3 +36,8 @@ The below diagram explains the high level architecture of the product.
 - Server - Golang, Kotlin
 - Processing - Redis, Kafka, AWS services
 - Client - Angular, React, Vue.js
+
+## Releases
+Expected release of v1 - July 2021
+Version 2 - Dec 2021
+Reach out to me if you have any requirements or queries.
