@@ -1,0 +1,12 @@
+<span *ngIf="isReadOnly()"
+      name="{{fieldName}}">
+    <span class="input__placeholder-text--empty-text"></span>
+    {{fieldValue}}
+</span>
+
+<input class="input-field"
+       *ngIf="!isReadOnly()"
+       name="{{fieldName}}"
+       [value]="fieldValue"
+       (keyup)="onFieldChange($event)"
+       type="text" />
