@@ -2,7 +2,7 @@
 A user interface to manage and view all your database table info: with an E-commerce view and Customer care view.
 
 ## About - Unique selling proposition (USP)
-We always tend to stack our products into various components - front end stack, back end or server stack, database stack, and all the other stacks beyond and between. A big challenge in software engineering is about_ managing definitions for all the data that we want to store and visualize_. 
+We always tend to stack our products into various components - front end stack, back end or server stack, database stack, and all the other stacks beyond and between. A big challenge in software engineering now is about _managing definitions for all the data that we want to store and visualize_. 
 To store a data object,
 - We end up defining a database schema (DB definition of the object),
 - writing up API's to serve this schema and comply to it (server side definition of the object), 
