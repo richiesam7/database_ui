@@ -5,7 +5,7 @@ import "strconv";
 import "database/sql";
 import _ "github.com/lib/pq";
 
-func executeQuery(tableName string, queryParams string)  []interface {} {
+func executeQuery(query string, queryParams string)  []interface {} {
 	params := connectionParams();
 	portnum, err:= strconv.Atoi(params["port"]);
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
@@ -24,7 +24,7 @@ func executeQuery(tableName string, queryParams string)  []interface {} {
 	if err != nil {
 	  panic(err)
 	}
-	rows, err := db.Query(prepareQuery(tableName));
+	rows, err := db.Query(query);
 	if err != nil {
 		panic(err)
 	}
@@ -83,5 +83,6 @@ func executeQuery(tableName string, queryParams string)  []interface {} {
         finalRows = append(finalRows, masterData)
     }
     return finalRows
-  }
+}
+
 

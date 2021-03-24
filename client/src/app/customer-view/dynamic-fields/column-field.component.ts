@@ -8,6 +8,9 @@ import { Component, Input } from '@angular/core';
     <div *ngIf="true">
     <text-field fieldName="{{data.name}}" fieldInputValue="{{data.value}}"></text-field>
     </div>
+    <div *ngIf="false">
+    <number-field fieldName="{{data.name}}" fieldInputValue="{{data.value}}"></number-field>
+    </div>
   `
 })
 export class ColumnFieldComponent {

@@ -10,17 +10,20 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	params := ""
+	firstParam, secondParam := parseUrl(r.URL.Path[1:])
+	response := ""
 	switch(r.Method) {
-	case http.MethodGet: fmt.Println("Get"); 
+	case http.MethodGet: 
+		if (firstParam == "definition_TD") {
+			response = fetchTableDefinition(secondParam)
+		} else {
+			response = fetchTableContent(firstParam, secondParam);
+		}
+		enableCors(&w)
+		fmt.Fprintf(w, fmt.Sprint(response))
 	case http.MethodPost: fmt.Println("Post");
 	default: fmt.Println("Default");
-	}
-    tableName := r.URL.Path[1:];
-	queryResponse := executeQuery(tableName, params);
-	response := marshallResponse(queryResponse);
-	enableCors(&w)
-	fmt.Fprintf(w,fmt.Sprint(response))	
+	}	
 }
 
 func enableCors(w *http.ResponseWriter) {

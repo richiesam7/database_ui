@@ -1,7 +1,6 @@
 import { ApiResponses } from 'src/app/fetch-framework/api-responses';
 import { ColumnBuilder } from '../columnBuilder';
 
-// All entity types inherit from here
 export class GenericClass {
     public entity;
     public associatedColumns;
@@ -24,7 +23,8 @@ export class GenericClass {
         for (let columnName in this.associatedColumns) {
             this.entity[columnName] = [];
             for (let attributeName in this.associatedColumns[columnName]) {
-                this.entity[columnName][attributeName] = this.columnBuilder[attributeName](this.associatedColumns[columnName][attributeName]);
+                this.entity[columnName][attributeName] =
+                    this.columnBuilder[attributeName](this.associatedColumns[columnName][attributeName]);
             };
             this.entity[columnName]['value'] = null;
         };

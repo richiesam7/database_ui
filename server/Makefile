@@ -1,2 +1,2 @@
-start_server:
-	go run databaseparams.go fetchInterface.go databaseop.go requesthandler.go
+start:
+	go run databaseparams.go urlHandler.go fetchInterface.go databaseop.go requesthandler.go

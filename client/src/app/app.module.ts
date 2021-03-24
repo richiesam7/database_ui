@@ -9,12 +9,14 @@ import { TextFieldComponent } from './field-framework/field-viewmodel/text-field
 import { DynamicFieldsComponent } from './customer-view/dynamic-fields/dynamic-fields.component';
 import { AnchorDirective } from './customer-view/dynamic-fields/dynamic-fields.directive';
 import { ColumnFieldComponent } from './customer-view/dynamic-fields/column-field.component';
+import { NumberFieldComponent } from './field-framework/field-viewmodel/number-field/number-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerViewComponent,
     TextFieldComponent,
+    NumberFieldComponent,
     AnchorDirective,
     DynamicFieldsComponent,
     ColumnFieldComponent

@@ -1,17 +1,17 @@
 package main
-import "fmt";
+import "strings"
 
-func validateurl(url: string) {
-	bool isValid = false;
-	if (url.Path[3:])
-		isValid := false;
+func validateurl(url string) bool {
+	isValid := false;
 	return isValid;
 } 
 
-func parseurl(url: string) bool {
-	fmt.Fprintf('1:' + url.Path[1:] + ',2:' + url.Path[2:]);
-	if (url.Path[3:])
-		return false;
-
-	return true;
+func parseUrl(urlPath string) (string, string) {
+	urls := strings.Split(urlPath, "/")
+	tableName := urls[0];
+	id := ""
+	if (len(urls) > 1) {
+		id = urls[1];
+	} 
+	return tableName, id
 }
