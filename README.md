@@ -26,6 +26,12 @@ A Postgre database, served by a Highly available Go server, sending/receiving da
 The below diagram explains the high level architecture of the product.
 ![image](https://user-images.githubusercontent.com/49153293/111121145-4be5c180-8592-11eb-902b-3503d5a5dcac.png)
 
+## Server architecture and stack
+TBA
+
+## Client architecture and stack
+TBA
+
 # Technology
 - Database - Postgre
 - Server - Golang
