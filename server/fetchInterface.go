@@ -10,14 +10,20 @@ func fetchTableDefinition(tableName string)  string {
 }
 
 func fetchTableContent(tableName string, id string) string {
-	query := prepareFetchQuery(tableName)
+	query := prepareFetchQuery(tableName, id)
 	queryResponse := executeQuery(query, id);
 	response := marshallResponse(queryResponse);
 	return response
 }
 
-func prepareFetchQuery(tableName string) string {
-	return "SELECT * from " + tableName ;
+func prepareFetchQuery(tableName string, id string) string {
+	query := ""
+	if (id != "") {
+		query = "SELECT * from " + tableName + " WHERE id = " + id
+	} else {
+		query = "SELECT * from " + tableName
+	}
+	return query;
 }
 
 func prepareDescQuery(tableName string) string {

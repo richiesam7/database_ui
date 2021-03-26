@@ -1,13 +1,17 @@
 package main
 import "strings"
 
-func validateurl(url string) bool {
-	isValid := false;
-	return isValid;
+func validateurl(urls []string) bool {
+	if (len(urls) > 2) {
+		return false;
+		} else {
+		return true;
+	}
 } 
 
 func parseUrl(urlPath string) (string, string) {
 	urls := strings.Split(urlPath, "/")
+	validateurl(urls)
 	tableName := urls[0];
 	id := ""
 	if (len(urls) > 1) {

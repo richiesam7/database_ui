@@ -15,3 +15,6 @@ all:
 	startpg
 	createdb
 	insert
+
+server_test:
+	go run httpcallTest.go
