@@ -27,14 +27,14 @@ The below diagram explains the high level architecture of the product.
 ![image](https://user-images.githubusercontent.com/49153293/111121145-4be5c180-8592-11eb-902b-3503d5a5dcac.png)
 
 ## Server architecture and stack
-Microservices architecture
-Each service deployed on separate containers
-Postgres on Docker, with scalable config
-Managed by Kubernetes
-gRPC for communication across services
-Server accepts http incoming requests
-Redis as cache - CacheService as a microservice
-Redis server deployed as separate container
+- Microservices architecture
+- Each service deployed on separate containers
+- Postgres on Docker, with scalable config
+- Managed by Kubernetes
+- gRPC for communication across services
+- Server accepts http incoming requests
+- Redis as cache - CacheService as a microservice
+- Redis server deployed as separate container
 
 ## Client architecture and stack
 TBA
