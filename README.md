@@ -27,7 +27,14 @@ The below diagram explains the high level architecture of the product.
 ![image](https://user-images.githubusercontent.com/49153293/111121145-4be5c180-8592-11eb-902b-3503d5a5dcac.png)
 
 ## Server architecture and stack
-TBA
+Microservices architecture
+Each service deployed on separate containers
+Postgres on Docker, with scalable config
+Managed by Kubernetes
+gRPC for communication across services
+Server accepts http incoming requests
+Redis as cache - CacheService as a microservice
+Redis server deployed as separate container
 
 ## Client architecture and stack
 TBA
@@ -40,10 +47,17 @@ TBA
 ## Future implementations
 - Databases - Postgre, Oracle, My SQL
 - Server - Golang, Kotlin
-- Processing - Redis, Kafka, AWS services
+- Processing - Redis, Kafka, AWS services, gRPC
 - Client - Angular, React, Vue.js
+- Infrastructure - Docker, Kubernetes
 
 ## Releases
-Expected release of v1 - July 2021
+Expected release of v1 - August 2021
+### What to expect
+make install - Gets anll dependencies and packages
+make start - Start containers and microservices required for the app
+make demo - sets up demo project with dummy data
+Access url from browser. For example this url will show the details of a mobile phones from dummy data - http://localhost:1000/mobiles/111
+
 Version 2 - Dec 2021
 Reach out to me if you have any requirements or queries.
