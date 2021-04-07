@@ -39,25 +39,26 @@ The below diagram explains the high level architecture of the product.
 ## Client architecture and stack
 TBA
 
-# Technology
+# Technology (v1)
 - Database - Postgre
 - Server - Golang
+- Processing - Redis, Microservices, gRPC
 - Client - Angular
-
-## Future implementations
-- Databases - Postgre, Oracle, My SQL
-- Server - Golang, Kotlin
-- Processing - Redis, Kafka, AWS services, gRPC
-- Client - Angular, React, Vue.js
+- Infrastructure - Docker, Kubernetes
+## Subsequent versions
+- Databases - Postgre, _Oracle, My SQL_
+- Server - Golang, _Kotlin_
+- Processing - Redis, Microservices, gRPC, _Kafka, AWS services_
+- Client - Angular, _React, Vue.js_
 - Infrastructure - Docker, Kubernetes
 
 ## Releases
 Expected release of v1 - August 2021
 ### What to expect
 make install - Gets anll dependencies and packages
-make start - Start containers and microservices required for the app
-make demo - sets up demo project with dummy data
-Access url from browser. For example this url will show the details of a mobile phones from dummy data - http://localhost:1000/mobiles/111
+- make start - Start containers and microservices required for the app
+- make demo - sets up demo project with dummy data
+- Access url from browser. For example this url will show the details of a mobile phones from dummy data - http://localhost:1000/mobiles/111
 
 Version 2 - Dec 2021
 Reach out to me if you have any requirements or queries.
