@@ -28,25 +28,25 @@ The below diagram explains the high level architecture of the product.
 
 ## Server architecture and stack
 
-- Server accepts http incoming requests
+- Server accepts http incoming requests.
 The prime role of the server is to relay http requests and transform that into actions or responses for the user interface which invokes these requests, by interacting with the postgres datastore which holds all the information
 
 - Microservices architecture.
 The product follows a microservices based architecture. The services rendered by the server include an http service which listens to http requests on port 8080 and a cache service which responds to the queries with data stored in the cache to avoid extra DB calls and ensure faster response times.
 
-- Each service deployed on separate containers
+- Each service deployed on separate containers.
 Redis as a cache is deployed on one container. One container hosts a Postgres cluster and all the database initialization/bootstrapping, making the database ready to use. The third container hosts the http server and cache client.
 
-- Postgres on Docker, with scalable config
+- Postgres on Docker, with scalable config.
 With Postgres deployed on docker as a separate conatiner, with its own config and setup (out of the box), you can create a scalable database cluster which can scale based on size and complexity requirements. 
 
-- Managed by Kubernetes
+- Managed by Kubernetes.
 Will be available in version 2 (v2)
 
-- gRPC for communication across services
+- gRPC for communication across services.
 Each of these microservices communicate via each other using gRPC, which implements http2 via the protocol buffer communication mechanism. 5x faster than http, ultra scalable - the benefits are endless.
 
-- Redis server deployed as separate container
+- Redis server deployed as separate container.
 Redis application is deployed on a separate container and exposes a port to allow interactions with redis to get and set data.
 The redis client/server queries DB tables for data if the data being asked for by the client is not avaible in the cache, and stores the most recent data in the redis store for easy access. This avoid extra overheads on the database for queries on data which was already accessed recently.
 
