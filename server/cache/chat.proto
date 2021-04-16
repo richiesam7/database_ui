@@ -1,0 +1,17 @@
+syntax = "proto3";
+package chat;
+
+message Message {
+  string body = 1;
+}
+
+message RedisMessage {
+  string key = 1;
+  string value = 2;
+}
+
+service ChatService {
+  rpc SayHello(Message) returns (Message) {}
+  rpc Get(RedisMessage) returns (RedisMessage) {}
+  rpc Set(RedisMessage) returns (RedisMessage) {}
+}
