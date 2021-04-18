@@ -50,6 +50,9 @@ Each of these microservices communicate via each other using gRPC, which impleme
 Redis application is deployed on a separate container and exposes a port to allow interactions with redis to get and set data.
 The redis client/server queries DB tables for data if the data being asked for by the client is not avaible in the cache, and stores the most recent data in the redis store for easy access. This avoid extra overheads on the database for queries on data which was already accessed recently.
 
+- Kafka steam processor (v2)
+To ensure reliable database writes and interactions for the server, kafka will be plugged in as a stream processor for handling database inserts and updates. You have a system with 1 million writes into the DB, dont worry, this got you covered.
+
 ## Client architecture and stack
 TBA
 
