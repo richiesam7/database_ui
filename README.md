@@ -21,7 +21,7 @@ The Go server and Angular client will all depend on this data object definition 
 
 # Architecture and Components
 
-A Postgre database, served by a Highly available Go server, sending/receiving data from an Angular-based web client is the essense of this product.
+A Postgre database, served by a Highly available Go server, sending/receiving data from an Angular-based web client is the essence of this product.
 
 The below diagram explains the high level architecture of the product.
 ![image](https://user-images.githubusercontent.com/49153293/115146845-f3648100-a075-11eb-945a-9c5efe8da8e1.png)
@@ -40,8 +40,8 @@ Redis as a cache is deployed on one container. One container hosts a Postgres cl
 - Postgres on Docker, with scalable config.
 With Postgres deployed on docker as a separate conatiner, with its own config and setup (out of the box), you can create a scalable database cluster which can scale based on size and complexity requirements. 
 
-- Managed by Kubernetes.
-Will be available in version 2 (v2)
+- Managed by Kubernetes (v2).
+Will be available in version 2 
 
 - gRPC for communication across services.
 Each of these microservices communicate via each other using gRPC, which implements http2 via the protocol buffer communication mechanism. 5x faster than http, ultra scalable - the benefits are endless.
@@ -50,7 +50,7 @@ Each of these microservices communicate via each other using gRPC, which impleme
 Redis application is deployed on a separate container and exposes a port to allow interactions with redis to get and set data.
 The redis client/server queries DB tables for data if the data being asked for by the client is not avaible in the cache, and stores the most recent data in the redis store for easy access. This avoid extra overheads on the database for queries on data which was already accessed recently.
 
-- Kafka steam processor (v2)
+- Kafka steam processor (v2).
 To ensure reliable database writes and interactions for the server, kafka will be plugged in as a stream processor for handling database inserts and updates. You have a system with 1 million writes into the DB, dont worry, this got you covered.
 
 ## Client architecture and stack
