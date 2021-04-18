@@ -24,7 +24,7 @@ The Go server and Angular client will all depend on this data object definition 
 A Postgre database, served by a Highly available Go server, sending/receiving data from an Angular-based web client is the essense of this product.
 
 The below diagram explains the high level architecture of the product.
-![image](https://user-images.githubusercontent.com/49153293/111121145-4be5c180-8592-11eb-902b-3503d5a5dcac.png)
+![image](https://user-images.githubusercontent.com/49153293/115146845-f3648100-a075-11eb-945a-9c5efe8da8e1.png)
 
 ## Server architecture and stack
 
